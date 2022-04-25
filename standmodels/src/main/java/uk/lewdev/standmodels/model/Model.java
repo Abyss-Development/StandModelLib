@@ -2,6 +2,7 @@ package uk.lewdev.standmodels.model;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
@@ -125,5 +126,9 @@ public class Model {
 		
 		this.stands.forEach(stand -> stand.remove());
 		this.stands.clear();
+	}
+
+	public Set<ArmorStand> getStands() {
+		return this.stands;
 	}
 }

@@ -1,5 +1,6 @@
 package uk.lewdev.standmodels.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,7 +22,7 @@ public class Model {
 	private long lastUpdate = System.currentTimeMillis(); // TimeMillis
 
 	private final List<ModelBuildInstruction> instructions;
-	private HashSet<ArmorStand> stands = new HashSet<>();
+	private List<ArmorStand> stands = new ArrayList<>();
 
 	private boolean playerInRenderDistance = false;
 	
@@ -128,7 +129,7 @@ public class Model {
 		this.stands.clear();
 	}
 
-	public Set<ArmorStand> getStands() {
+	public List<ArmorStand> getStands() {
 		return this.stands;
 	}
 }
